@@ -8,6 +8,6 @@ class TokenPunctuation implements TokenInterface
 {
     public function getType(): string
     {
-        return "punctuation";
+        return "<span class=\"punctuation\">";
     }
 }

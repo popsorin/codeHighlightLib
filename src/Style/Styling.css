@@ -1,0 +1,24 @@
+.keyword{
+    color: brown;
+}
+.punctuation{
+    color: blue;
+}
+.number{
+    color: hotpink;
+}
+.variable{
+    color: red;
+}
+.bracket{
+    color: greenyellow;
+}
+.punctuation{
+    color: gold;
+}
+.atom{
+    color: teal;
+}
+.builtin{
+    color: magenta;
+}

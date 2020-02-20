@@ -4,6 +4,7 @@ namespace HighlightLib\Clasifier;
 
 use HighlightLib\Contracts\ClasifierInterface;
 use HighlightLib\Contracts\TokenInterface;
+use HighlightLib\Token\TokenWhiteSpace;
 
 class Clasifier implements ClasifierInterface
 {

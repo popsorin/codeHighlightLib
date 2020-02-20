@@ -5,7 +5,7 @@ namespace HighlightLib\Config;
 return array(
     "/0|([1-9][0-9])|([0-9])/"=>"HighlightLib\Token\TokenNumber",
     "/\\$[A-Za-z_]\w*/"=>"HighlightLib\Token\TokenVariable",
-    "/^\{|\}$/"=>"HighlightLib\Token\TokenBraket",
+    "/^\{|\}$/"=>"HighlightLib\Token\TokenBracket",
     "/\n/"=>"HighlightLib\Token\TokenEOL",
     "/^\.|\,|\;|\:|\‘|\“|\[|\]|\(|\)$/"=>"HighlightLib\Token\TokenPunctuation",
     "/^true|false|null|TRUE|FALSE|NULL|__CLASS__|__DIR__|__FILE__|__LINE__|__METHOD__

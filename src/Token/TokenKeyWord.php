@@ -8,6 +8,6 @@ class TokenKeyWord implements TokenInterface
 {
     public function getType(): string
     {
-        return "keyword";
+        return "<span class=\"keyword\">";
     }
 }

@@ -8,6 +8,6 @@ class TokenBuiltIn implements TokenInterface
 {
     public function getType(): string
     {
-        return "builtIn";
+        return "<span class=\"builtIn\">";
     }
 }

@@ -8,6 +8,6 @@ class TokenNumber implements TokenInterface
 {
     public function getType(): string
     {
-        return "number";
+        return "<span class=\"number\">";
     }
 }

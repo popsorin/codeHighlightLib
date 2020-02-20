@@ -8,6 +8,6 @@ class TokenVariable implements TokenInterface
 {
     public function getType(): string
     {
-        return "variable";
+        return "<span class=\"variable\">";
     }
 }
