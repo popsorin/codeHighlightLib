@@ -1,0 +1,19 @@
+{
+    "name": "codehighlightlib/codehightlib",
+    "description": "Code for Evozon",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Pop Sorin",
+            "email": "popsorin15@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "7.4",
+        "phpunit/phpunit": "^8.5"
+    },
+
+    "autoload": {
+        "psr-4": {"HighlightLib\\": "src/"}
+    }
+}
