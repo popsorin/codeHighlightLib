@@ -4,7 +4,7 @@ namespace HighlightLib\Clasifier;
 
 use HighlightLib\Contracts\ClasifierInterface;
 use HighlightLib\Contracts\TokenInterface;
-use HighlightLib\Token\TokenWhiteSpace;
+use HighlightLib\Token\NormalToken;
 
 class Clasifier implements ClasifierInterface
 {
@@ -19,8 +19,10 @@ class Clasifier implements ClasifierInterface
     {
         foreach ($this->configuration as $key => $value){
             if(preg_match($key, $stringToken)) {
-                return new $value;
+                return new $value($stringToken);
             }
         }
+
+        return new NormalToken($stringToken);
     }
 }

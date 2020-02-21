@@ -1,24 +1,27 @@
 .keyword{
-    color: brown;
+    color: orange;
 }
 .punctuation{
     color: blue;
 }
 .number{
-    color: hotpink;
+    color: green;
 }
 .variable{
     color: red;
 }
 .bracket{
-    color: greenyellow;
+    color: darkred;
 }
 .punctuation{
-    color: gold;
+    color: darkorchid;
 }
 .atom{
     color: teal;
 }
 .builtin{
     color: magenta;
+}
+.normal{
+    color: black;
 }

@@ -14,7 +14,7 @@ class CodeHighlight
     private $clasifier;
     private $assembler;
 
-    /*public function __construct(TokenizerInterface $tokenizer, ClasifierInterface $clasifier, AssemblerInterface $assembler)
+    public function __construct(TokenizerInterface $tokenizer, ClasifierInterface $clasifier, AssemblerInterface $assembler)
     {
         $this->tokenizer = $tokenizer;
         $this->clasifier = $clasifier;
@@ -23,5 +23,15 @@ class CodeHighlight
 
     public function highlight(string $string): string
     {
-    }*/
+        $tokenizedArray = $this->tokenizer->tokenize($string);
+        $clasifiedArray = array();
+
+        foreach ($tokenizedArray as $stringToken) {
+            $clasifiedToken = $this->clasifier->clasify($stringToken);
+            array_push($clasifiedArray, $clasifiedToken);
+        }
+
+        $assembled = $this->assembler->assemble($clasifiedArray);
+        return $assembled . "   <html> <head> <link rel='stylesheet' href='src/Style/Styling.css'></head> <html>";
+    }
 }

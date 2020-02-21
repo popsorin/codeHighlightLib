@@ -4,24 +4,18 @@ namespace HighlightLib\Assembler;
 
 use HighlightLib\Contracts\AssemblerInterface;
 use HighlightLib\Token\TokenEOL;
-use HighlightLib\Token\TokenWhiteSpace;
 
 class Assembler implements AssemblerInterface
 {
-
     public function assemble(array $tokens): string
     {
         $text = "";
-        foreach($tokens as $key=>$value)
-        {
-           if($value instanceof TokenEOL)
-           {
-               $text = $text . "<br>";
+        foreach($tokens as $token) {
+           if($token instanceof TokenEOL) {
+               $text .= "<br>";
+               continue;
            }
-           else
-           {
-               $text = $text . $value->getType() . $key . "</span>" . " ";
-           }
+           $text .= $token->getType();
         }
 
         return $text;

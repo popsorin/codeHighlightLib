@@ -4,11 +4,10 @@ namespace HighlightLib\Token;
 
 use HighlightLib\Contracts\TokenInterface;
 
-class TokenWhiteSpace implements TokenInterface
+class NormalToken extends AbstractToken
 {
-
     public function getType(): string
     {
-        return " ";
+        return "<span class=\"normal\"> " . $this->token . " </span>";
     }
 }

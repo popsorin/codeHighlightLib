@@ -6,19 +6,15 @@ use HighlightLib\Clasifier\Clasifier;
 use HighlightLib\CodeHighlight;
 use HighlightLib\Tokenizer\TokenizerWhiteSpace;
 
-$configuration =  require dirname(__FILE__) . "/src/Config/Config.php";
+$configuration = require dirname(__FILE__) . "/Config/Config.php";
 $tokenizer = new TokenizerWhiteSpace();
 $clasifier = new Clasifier($configuration);
-$tokenizedArray = $tokenizer->tokenize("1 \$kali 3 { } \n ( ] , . : ;  static array_flip \n __LINE__ self \n");
-$clasifiedArray = array();
-
-foreach ($tokenizedArray as $stringToken)
-{
-  $clasifiedArray[$stringToken] = $clasifier->clasify($stringToken);
-}
-
+$arrayForTokenizing = "for ( \$i = 1 ; \$i <= \$n ; \$i ++ ) \n { echo \"hi\" }  true array_push abstract and false";
 $assembler = new Assembler();
-print_r($assembler->assemble($clasifiedArray));
+
+$codeHighlight = new CodeHighlight($tokenizer, $clasifier, $assembler);
+
+print_r($codeHighlight->highlight($arrayForTokenizing));
 
 echo "<html> <head> <link rel='stylesheet' href='src/Style/Styling.css'></head> <html>";
 /*

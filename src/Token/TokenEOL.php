@@ -8,6 +8,6 @@ class TokenEOL implements TokenInterface
 {
     public function getType(): string
     {
-        return "<br>";
+        return PHP_EOL;
     }
 }

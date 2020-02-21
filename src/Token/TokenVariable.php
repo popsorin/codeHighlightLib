@@ -4,10 +4,10 @@ namespace HighlightLib\Token;
 
 use HighlightLib\Contracts\TokenInterface;
 
-class TokenVariable implements TokenInterface
+class TokenVariable extends AbstractToken
 {
     public function getType(): string
     {
-        return "<span class=\"variable\">";
+        return "<span class=\"variable\">" . $this->token . " </span>";
     }
 }
